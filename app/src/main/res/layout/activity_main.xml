@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLightCheck"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLightCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="LightSensorCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFlatCheck"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFlatCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:text="FlatCheck"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLightCheck"
+        app:layout_constraintEnd_toStartOf="@+id/btnMoveCheck"
+        app:layout_constraintStart_toEndOf="@+id/btnLightCheck"
+        app:layout_constraintTop_toTopOf="@+id/btnLightCheck" />
+
+    <Button
+        android:id="@+id/btnMoveCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:text="MovementCheck"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFlatCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFlatCheck"
+        app:layout_constraintTop_toTopOf="@+id/btnFlatCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
